@@ -1,4 +1,4 @@
-import { parseCSV } from '../src/parseCSV';
+import { parseCSV } from '../src/functions/parseCSV';
 
 describe('CSV Combiner', () => {
     let testObject = [];

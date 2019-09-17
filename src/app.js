@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { parseCSV } from './parseCSV';
+import { logResult, parseCSV } from './functions/index';
 
 const main = async () => {
     let currentArray = [];
@@ -28,20 +28,7 @@ const main = async () => {
             });
         }
 
-        Object.keys(currentArray[0]).forEach((res) => {
-            process.stdout.write(`\t\t\t ${res} \t\t`);
-        });
-
-        process.stdout.write('\n');
-
-        currentArray.forEach(res => {
-            Object.values(res).forEach(val => {
-                process.stdout.write(`${val} \t`);
-            });
-            process.stdout.write('\n');
-        });
-
-        console.log('Done!');
+        logResult(currentArray);
     } catch (err) {
         throw new Error('main -> ', err);
     }
