@@ -17,6 +17,8 @@ const main = async () => {
     const paths = inputs.files.split(' ');
 
     try {
+        console.log('loading...');
+
         for (let val of paths) {
             let result = await parseCSV(val);
 
@@ -26,7 +28,20 @@ const main = async () => {
             });
         }
 
-        console.table(currentArray);
+        Object.keys(currentArray[0]).forEach((res) => {
+            process.stdout.write(`\t\t\t ${res} \t\t`);
+        });
+
+        process.stdout.write('\n');
+
+        currentArray.forEach(res => {
+            Object.values(res).forEach(val => {
+                process.stdout.write(`${val} \t`);
+            });
+            process.stdout.write('\n');
+        });
+
+        console.log('Done!');
     } catch (err) {
         throw new Error('main -> ', err);
     }
