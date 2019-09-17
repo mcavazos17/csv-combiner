@@ -33,5 +33,3 @@ const main = async () => {
 }
 
 main();
-
-// ../fixtures/clothing.csv ../fixtures/accessories.csv ../fixtures/household_cleaners.csv ../fixtures/convert.csv ../fixtures/clothing-big.csv
