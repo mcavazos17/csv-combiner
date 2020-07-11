@@ -6,6 +6,8 @@ const main = async () => {
 
     console.log('hello');
 
+    console.log('2nd commit');
+
     const inputs = await inquirer.prompt([{
         type: 'input',
         name: 'files',
