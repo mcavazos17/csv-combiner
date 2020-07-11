@@ -12,6 +12,8 @@ export const parseCSV = async (path) => {
 
             let parsedArr = parse(res, { header: true });
 
+            console.log();
+
             resolve(parsedArr.data.map(res => ({ ...res, filename })));
         });
     })

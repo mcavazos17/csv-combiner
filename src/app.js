@@ -4,6 +4,8 @@ import { logResult, parseCSV } from './functions/index';
 const main = async () => {
     let currentArray = [];
 
+    console.log('hello');
+
     const inputs = await inquirer.prompt([{
         type: 'input',
         name: 'files',
